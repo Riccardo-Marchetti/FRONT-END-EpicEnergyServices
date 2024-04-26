@@ -49,7 +49,7 @@ const Fatture = () => {
                     <tr>
                       <td>{fattura.numero}</td>
                       <td>{fattura.data}</td>
-                      <td>{fattura.stato}</td>
+                      <td>{fattura.stato.nome}</td>
                       <td>{fattura.importo} €</td>
                     </tr>
                   </tbody>
