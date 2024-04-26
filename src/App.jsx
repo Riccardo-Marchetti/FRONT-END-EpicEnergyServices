@@ -6,6 +6,7 @@ import RegisterPage from "./components/RegisterPage";
 import StartPage from "./components/StartPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Fatture from "./components/Fatture";
+import Clienti from "./components/Clienti";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/accedi" element={<LoginPage />} />
         <Route path="/registrati" element={<RegisterPage />} />
         <Route path="/fatture" element={<Fatture />} />
+        <Route path="/clienti" element={<Clienti />} />
       </Routes>
     </BrowserRouter>
   );

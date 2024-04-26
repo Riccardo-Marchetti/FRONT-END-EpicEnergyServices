@@ -21,7 +21,7 @@ const LoginPage = () => {
         const data = await res.json();
         console.log(data);
         localStorage.setItem("token", data.accessToken);
-        navigate("/");
+        navigate("/fatture");
         window.location.reload();
       } else {
         throw new Error(`${res.status} - Errore nella fetch`);
@@ -39,47 +39,49 @@ const LoginPage = () => {
   return (
     <>
       <MyNavBar />
-      <Row className="p-0 m-0">
-        <Col className="col-img  col-12 p-0 d-flex flex-column align-items-end justify-content-center ">
-          <div>
-            <div className="bg-white form-cont d-flex flex-column justify-content-evenly rounded-5  ">
-              <div className="d-flex justify-content-center">
-                <h2 className="text-black ps-3 fw-bold ">Benvenuto!</h2>
-              </div>
-              <div className="d-flex justify-content-center">
-                <h3>Accedi</h3>
-              </div>
-              <div className="d-flex align-items-center justify-content-center">
-                <Form onSubmit={handleLogin} className="form">
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Inserisci la tua email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </Form.Group>
+      <header className="sfondo-img">
+        <Row className="p-0 m-0">
+          <Col className="col-img col-12 p-0 d-flex flex-column align-items-end justify-content-center ">
+            <div>
+              <div className="bg-white form-cont d-flex flex-column justify-content-evenly rounded-5  ">
+                <div className="d-flex justify-content-center">
+                  <h2 className="text-black ps-3 fw-bold ">Benvenuto!</h2>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <h3>Accedi</h3>
+                </div>
+                <div className="d-flex align-items-center justify-content-center">
+                  <Form onSubmit={handleLogin} className="form">
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="Inserisci la tua email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                    </Form.Group>
 
-                  <Button variant="primary" type="submit">
-                    Accedi
-                  </Button>
-                </Form>
+                    <Button variant="primary" type="submit">
+                      Accedi
+                    </Button>
+                  </Form>
+                </div>
               </div>
             </div>
-          </div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </header>
     </>
   );
 };

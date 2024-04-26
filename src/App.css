@@ -1,9 +1,19 @@
 .col-img {
+  height: 100vh;
+  padding-right: 200px !important;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+.sfondo-img {
   background-image: url(https://www.quotidiano.net/image-service/version/c:M2E0NmYzMzctNDMxYi00:MzFiYmUz/pannelli-solari-istock-photo.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
-  padding-right: 200px !important;
+  height: 100vh;
 }
 .form-cont {
   width: 400px;
@@ -29,6 +39,6 @@
 }
 
 .cont-home {
-  width: 330px;
+  width: 350px;
   height: 250px;
 }

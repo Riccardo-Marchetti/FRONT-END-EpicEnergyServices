@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 
 const Fatture = () => {
@@ -31,32 +31,33 @@ const Fatture = () => {
   return (
     <>
       <Container>
-        <Table striped bordered hover size="sm">
-          <thead>
-            <tr>
-              <th>numero</th>
-              <th>p. Iva</th>
-              <th>data</th>
-              <th>stato</th>
-              <th>importo</th>
-            </tr>
-          </thead>
-          {fatture.map((fattura) => {
-            return (
-              <React.Fragment key={fattura.numero}>
-                <tbody key={fattura.numero}>
-                  <tr>
-                    <td>{fattura.numero}</td>
-                    <td>{fattura.pIva}</td>
-                    <td>{fattura.data}</td>
-                    <td>{fattura.stato}</td>
-                    <td>{fattura.importo} €</td>
-                  </tr>
-                </tbody>
-              </React.Fragment>
-            );
-          })}
-        </Table>
+        <Row>
+          <h1 className="d-flex justify-content-center my-3">Elenco fatture</h1>
+          <Table striped bordered hover size="sm">
+            <thead>
+              <tr>
+                <th>numero</th>
+                <th>data</th>
+                <th>stato</th>
+                <th>importo</th>
+              </tr>
+            </thead>
+            {fatture.map((fattura) => {
+              return (
+                <React.Fragment key={fattura.numero}>
+                  <tbody key={fattura.numero}>
+                    <tr>
+                      <td>{fattura.numero}</td>
+                      <td>{fattura.data}</td>
+                      <td>{fattura.stato}</td>
+                      <td>{fattura.importo} €</td>
+                    </tr>
+                  </tbody>
+                </React.Fragment>
+              );
+            })}
+          </Table>
+        </Row>
       </Container>
     </>
   );

@@ -33,8 +33,8 @@ const MyNavBar = () => {
                 Fatture
               </Link>
 
-              <Link to="" className="navbar-brand pe-2 text-white">
-                Contatti
+              <Link to="/clienti" className="navbar-brand pe-2 text-white">
+                Clienti
               </Link>
             </Nav>
 
