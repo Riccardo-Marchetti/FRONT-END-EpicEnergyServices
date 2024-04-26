@@ -1,0 +1,34 @@
+.col-img {
+  background-image: url(https://www.quotidiano.net/image-service/version/c:M2E0NmYzMzctNDMxYi00:MzFiYmUz/pannelli-solari-istock-photo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 92vh;
+  padding-right: 200px !important;
+}
+.form-cont {
+  width: 400px;
+  height: 420px;
+}
+.form {
+  width: 300px;
+}
+.button-login:hover {
+  background-color: transparent;
+}
+.form-reg-cont {
+  width: 400px;
+  height: 650px;
+}
+.but-home {
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.cont-home {
+  width: 330px;
+  height: 250px;
+}
